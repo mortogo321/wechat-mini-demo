@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="section">
+    <view class="section-title">Network Request</view>
+    <view class="section-content">
+      <button type="primary" loading="{{loading}}" bindtap="doGet">GET Request</button>
+      <button type="default" loading="{{loading}}" bindtap="doPost" class="mt-20">POST Request</button>
+      <view class="result-box mt-20" wx:if="{{result}}">
+        <text>{{result}}</text>
+      </view>
+    </view>
+  </view>
+</view>

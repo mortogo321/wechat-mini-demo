@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="section">
+    <view class="section-title">Scan QR/Barcode</view>
+    <view class="section-content">
+      <button type="primary" bindtap="scanCode">Scan Code</button>
+      <view class="result-box mt-20" wx:if="{{result}}"><text>{{result}}</text></view>
+    </view>
+  </view>
+</view>

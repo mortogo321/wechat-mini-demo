@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="section">
+    <view class="section-title">Image Picker</view>
+    <view class="section-content">
+      <button type="primary" bindtap="chooseImage">Choose Image</button>
+      <view class="image-grid mt-20">
+        <image wx:for="{{images}}" wx:key="*this" src="{{item}}" mode="aspectFill" class="preview-img" data-src="{{item}}" bindtap="previewImage"/>
+      </view>
+    </view>
+  </view>
+</view>

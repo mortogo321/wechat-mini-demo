@@ -1,0 +1,46 @@
+name: wechat-mini
+
+services:
+  # Development environment
+  api-dev:
+    build:
+      context: .
+      target: development
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./server:/app/server
+      - ./package.json:/app/package.json
+    environment:
+      - NODE_ENV=development
+    profiles:
+      - dev
+
+  # Staging environment
+  api-staging:
+    build:
+      context: .
+      target: staging
+    ports:
+      - "3001:3000"
+    environment:
+      - NODE_ENV=staging
+    profiles:
+      - staging
+
+  # Production environment
+  api-prod:
+    build:
+      context: .
+      target: production
+    ports:
+      - "3002:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    profiles:
+      - prod
+
+networks:
+  default:
+    name: miniprogram-network

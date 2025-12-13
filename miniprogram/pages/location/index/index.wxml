@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="section">
+    <view class="section-title">Location</view>
+    <view class="section-content">
+      <button type="primary" bindtap="getLocation">Get Location</button>
+      <button type="default" bindtap="openMap" class="mt-20">Open in Map</button>
+      <button type="default" bindtap="goToMap" class="mt-20">Map Component</button>
+      <view class="result-box mt-20" wx:if="{{location}}">
+        <text>Lat: {{location.latitude}}\nLng: {{location.longitude}}</text>
+      </view>
+    </view>
+  </view>
+</view>

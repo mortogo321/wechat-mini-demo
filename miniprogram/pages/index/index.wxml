@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="header">
+    <text class="title">WeChat Mini Program</text>
+    <text class="subtitle">Feature Demo with WeUI</text>
+    <text class="system-info">{{systemInfo}}</text>
+  </view>
+
+  <view class="feature-grid">
+    <view
+      class="feature-card"
+      wx:for="{{features}}"
+      wx:key="id"
+      data-url="{{item.url}}"
+      bindtap="navigateTo"
+    >
+      <text class="feature-icon">{{item.icon}}</text>
+      <text class="feature-name">{{item.name}}</text>
+      <text class="feature-desc">{{item.desc}}</text>
+    </view>
+  </view>
+
+  <view class="footer">
+    <text>Built with WeUI</text>
+  </view>
+</view>

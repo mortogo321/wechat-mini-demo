@@ -1,0 +1,71 @@
+.container {
+  padding: 30rpx;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  padding: 60rpx 0;
+}
+
+.title {
+  display: block;
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #07C160;
+}
+
+.subtitle {
+  display: block;
+  font-size: 28rpx;
+  color: #888;
+  margin-top: 10rpx;
+}
+
+.system-info {
+  display: block;
+  font-size: 22rpx;
+  color: #aaa;
+  margin-top: 20rpx;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20rpx;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  text-align: center;
+  box-shadow: 0 2rpx 10rpx rgba(0,0,0,0.05);
+}
+
+.feature-icon {
+  font-size: 60rpx;
+  display: block;
+  margin-bottom: 16rpx;
+}
+
+.feature-name {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333;
+  display: block;
+}
+
+.feature-desc {
+  font-size: 22rpx;
+  color: #888;
+  margin-top: 8rpx;
+  display: block;
+}
+
+.footer {
+  text-align: center;
+  padding: 40rpx;
+  color: #ccc;
+  font-size: 24rpx;
+}

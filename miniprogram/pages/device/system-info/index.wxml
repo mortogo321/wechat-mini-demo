@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="section">
+    <view class="section-title">Device Info</view>
+    <view class="section-content">
+      <view class="info-row"><text>Brand:</text><text>{{info.brand}}</text></view>
+      <view class="info-row"><text>Model:</text><text>{{info.model}}</text></view>
+      <view class="info-row"><text>System:</text><text>{{info.system}}</text></view>
+      <view class="info-row"><text>Platform:</text><text>{{info.platform}}</text></view>
+      <view class="info-row"><text>Screen:</text><text>{{info.screenWidth}}x{{info.screenHeight}}</text></view>
+      <view class="info-row"><text>Window:</text><text>{{info.windowWidth}}x{{info.windowHeight}}</text></view>
+      <view class="info-row"><text>Language:</text><text>{{info.language}}</text></view>
+      <view class="info-row"><text>Version:</text><text>{{info.version}}</text></view>
+    </view>
+  </view>
+</view>

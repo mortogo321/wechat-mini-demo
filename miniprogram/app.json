@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/components/index/index",
+    "pages/components/button/index",
+    "pages/components/form/index",
+    "pages/components/picker/index",
+    "pages/components/swiper/index",
+    "pages/api/index/index",
+    "pages/api/request/index",
+    "pages/api/storage/index",
+    "pages/device/index/index",
+    "pages/device/system-info/index",
+    "pages/device/scan/index",
+    "pages/media/index/index",
+    "pages/media/image/index",
+    "pages/media/audio/index",
+    "pages/location/index/index",
+    "pages/location/map/index",
+    "pages/canvas/index/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#07C160",
+    "navigationBarTitleText": "Mini Program Demo",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f5f5f5"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#07C160",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "Home",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png"
+      },
+      {
+        "pagePath": "pages/components/index/index",
+        "text": "Components",
+        "iconPath": "images/component.png",
+        "selectedIconPath": "images/component-active.png"
+      },
+      {
+        "pagePath": "pages/api/index/index",
+        "text": "API",
+        "iconPath": "images/api.png",
+        "selectedIconPath": "images/api-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib": {
+    "weui": true
+  }
+}

@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="section">
+    <view class="section-title">Button Types</view>
+    <view class="section-content">
+      <button type="primary" bindtap="handleTap">Primary Button</button>
+      <button type="default" class="mt-20" bindtap="handleTap">Default Button</button>
+      <button type="warn" class="mt-20" bindtap="handleTap">Warn Button</button>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">Button Sizes</view>
+    <view class="section-content">
+      <button type="primary" size="default">Default Size</button>
+      <button type="primary" size="mini" class="mt-20">Mini Size</button>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">Button States</view>
+    <view class="section-content">
+      <button type="primary" disabled>Disabled</button>
+      <button type="primary" loading="{{loading}}" bindtap="handleLoading" class="mt-20">
+        {{loading ? 'Loading...' : 'Click to Load'}}
+      </button>
+      <button type="primary" plain class="mt-20">Plain Button</button>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">Open Capabilities</view>
+    <view class="section-content">
+      <button type="primary" open-type="share">Share</button>
+      <button type="default" open-type="feedback" class="mt-20">Feedback</button>
+    </view>
+  </view>
+</view>

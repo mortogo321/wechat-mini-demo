@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="section">
+    <view class="section-title">Date Picker</view>
+    <view class="section-content">
+      <picker mode="date" value="{{date}}" bindchange="onDateChange">
+        <view class="picker-item">Date: {{date}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class="section">
+    <view class="section-title">Time Picker</view>
+    <view class="section-content">
+      <picker mode="time" value="{{time}}" bindchange="onTimeChange">
+        <view class="picker-item">Time: {{time}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class="section">
+    <view class="section-title">Region Picker</view>
+    <view class="section-content">
+      <picker mode="region" value="{{region}}" bindchange="onRegionChange">
+        <view class="picker-item">Region: {{region[0]}} {{region[1]}} {{region[2]}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class="section">
+    <view class="section-title">Selector Picker</view>
+    <view class="section-content">
+      <picker range="{{options}}" value="{{selectedIndex}}" bindchange="onPickerChange">
+        <view class="picker-item">Selected: {{options[selectedIndex]}}</view>
+      </picker>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="section">
+    <view class="section-title">Local Storage</view>
+    <view class="section-content">
+      <input class="input" placeholder="Key" value="{{key}}" bindinput="onInputKey"/>
+      <input class="input mt-20" placeholder="Value" value="{{value}}" bindinput="onInputValue"/>
+      <view class="flex-row gap-20 mt-20">
+        <button type="primary" size="mini" bindtap="setStorage">Save</button>
+        <button type="default" size="mini" bindtap="getStorage">Get</button>
+        <button type="warn" size="mini" bindtap="clearStorage">Clear</button>
+      </view>
+      <view class="result-box mt-20">Stored: {{storedValue}}</view>
+    </view>
+  </view>
+</view>

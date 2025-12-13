@@ -1,0 +1,42 @@
+<view class="container">
+  <view class="section">
+    <view class="section-title">Input</view>
+    <view class="section-content">
+      <input class="input" placeholder="Enter text..." value="{{inputValue}}" bindinput="onInputChange"/>
+      <input class="input mt-20" type="number" placeholder="Number only"/>
+      <input class="input mt-20" password placeholder="Password"/>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">Textarea</view>
+    <view class="section-content">
+      <textarea class="textarea" placeholder="Enter description..." bindinput="onTextareaChange"/>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">Checkbox & Switch</view>
+    <view class="section-content">
+      <checkbox-group bindchange="onCheckboxChange">
+        <label class="flex-row gap-20">
+          <checkbox value="agree"/>
+          <text>I agree to terms</text>
+        </label>
+      </checkbox-group>
+      <view class="flex-row flex-between mt-20">
+        <text>Enable notifications</text>
+        <switch checked="{{switchValue}}" bindchange="onSwitchChange"/>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">Slider</view>
+    <view class="section-content">
+      <slider value="{{sliderValue}}" show-value bindchange="onSliderChange"/>
+    </view>
+  </view>
+
+  <button type="primary" class="mt-20" bindtap="onSubmit">Submit Form</button>
+</view>

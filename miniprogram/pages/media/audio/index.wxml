@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="section">
+    <view class="section-title">Audio Player</view>
+    <view class="section-content">
+      <button type="primary" bindtap="togglePlay">{{playing ? 'Pause' : 'Play'}}</button>
+      <view class="result-box mt-20">{{currentTime}}s / {{duration}}s</view>
+    </view>
+  </view>
+</view>

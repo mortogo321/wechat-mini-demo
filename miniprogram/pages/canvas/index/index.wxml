@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="section">
+    <view class="section-title">Canvas Drawing</view>
+    <view class="section-content">
+      <canvas canvas-id="myCanvas" class="canvas"/>
+      <view class="flex-row gap-20 mt-20">
+        <button type="primary" size="mini" bindtap="drawDemo">Draw</button>
+        <button type="default" size="mini" bindtap="clearCanvas">Clear</button>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="section">
+    <view class="section-title">Basic Swiper</view>
+    <view class="section-content">
+      <swiper class="swiper" indicator-dots autoplay="{{autoplay}}" interval="{{interval}}" circular="{{circular}}">
+        <swiper-item wx:for="{{slides}}" wx:key="text">
+          <view class="slide" style="background:{{item.color}}">{{item.text}}</view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+  <view class="section">
+    <view class="section-title">Vertical Swiper</view>
+    <view class="section-content">
+      <swiper class="swiper" vertical indicator-dots>
+        <swiper-item wx:for="{{slides}}" wx:key="text">
+          <view class="slide" style="background:{{item.color}}">{{item.text}}</view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+</view>

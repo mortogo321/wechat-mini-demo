@@ -1,0 +1,4 @@
+<view class="container">
+  <map id="myMap" class="map" latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers}}" scale="14" show-location/>
+  <button type="primary" bindtap="moveToLocation" class="mt-20">Move to My Location</button>
+</view>
