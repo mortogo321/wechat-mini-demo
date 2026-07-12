@@ -1,75 +1,72 @@
 # WeChat Mini Program Demo
 
-Full-featured WeChat Mini Program demo with WeUI and Docker multi-stage setup.
+A WeChat Mini Program feature showcase paired with a small Express mock API, demonstrating Mini Program page/component structure, WeUI integration, device and media APIs, and a multi-stage Dockerized backend for dev/staging/prod environments.
+
+## What's inside
+
+- Mini Program built on WeUI covering common UI patterns: buttons, forms, pickers, swipers
+- Native API demos: network requests, local storage
+- Device feature demos: system info, QR code scanning
+- Media demos: image picker, audio playback
+- Location demos: GPS positioning, map component
+- Canvas drawing demo
+- Express mock API server (`server/index.js`) exposing in-memory users/posts resources with CORS and request logging
+- Multi-stage Dockerfile and Compose profiles for development, staging, and production API server environments
+
+## Tech stack
+
+- WeChat Mini Program framework (WXML/WXSS/JS), WeUI extended component library
+- Node.js, Express, cors, morgan, uuid
+- Docker / Docker Compose (multi-stage build with dev/staging/prod targets)
+- ESLint, Jest (configured for the server codebase)
+
+## Quickstart
+
+### Mini Program
+
+1. Open WeChat DevTools.
+2. Import the project by selecting the repository root (`project.config.json` is already configured).
+3. Add tabbar icons (81x81px PNG) to `miniprogram/images/`: `home.png`/`home-active.png`, `component.png`/`component-active.png`, `api.png`/`api-active.png`.
+4. Set your own `appid` in `project.config.json`, or use the test app ID provided by WeChat DevTools.
+
+### Mock API server
+
+```bash
+yarn install
+yarn dev
+```
+
+Or with Docker:
+
+```bash
+docker compose --profile dev up      # http://localhost:3000
+docker compose --profile staging up  # http://localhost:3001
+docker compose --profile prod up     # http://localhost:3002
+```
 
 ## Structure
 
 ```
-├── miniprogram/          # Mini program source
-│   ├── pages/            # Feature demo pages
-│   ├── utils/            # Helpers
-│   └── images/           # Icons (add your own)
-├── server/               # Mock API server
-├── Dockerfile            # Multi-stage build
-└── docker-compose.yml    # Dev/Staging/Prod profiles
+miniprogram/          Mini Program source
+  pages/               Feature demo pages (components, api, device, media, location, canvas)
+  utils/               Request helper and shared utilities
+server/                Express mock API server
+Dockerfile             Multi-stage build (development/staging/production)
+docker-compose.yml     Compose profiles: dev, staging, prod
 ```
 
-## Features Demo
+## API endpoints (mock server)
 
-- **UI Components**: Button, Form, Picker, Swiper
-- **API**: Network requests, Storage
-- **Device**: System info, QR scan
-- **Media**: Image picker, Audio player
-- **Location**: GPS, Map component
-- **Canvas**: Drawing demo
+- `GET /health` - service health check
+- `GET /api/users`, `GET /api/users/:id`, `POST /api/users`
+- `GET /api/posts`, `GET /api/posts/:id`, `POST /api/posts`
 
-## Setup
+## Mini Program pages
 
-### Mini Program
-1. Open WeChat DevTools
-2. Import project (select root folder)
-3. Add tabbar icons to `miniprogram/images/`
-
-### API Server
-
-```bash
-# Install dependencies
-yarn install
-
-# Development
-yarn dev
-
-# Or with Docker
-docker compose --profile dev up
-```
-
-## Docker Commands
-
-```bash
-# Development (port 3000)
-docker compose --profile dev up -d
-
-# Staging (port 3001)
-docker compose --profile staging up -d
-
-# Production (port 3002)
-docker compose --profile prod up -d
-
-# Build specific target
-docker build --target development -t miniprogram-api:dev .
-docker build --target production -t miniprogram-api:prod .
-```
-
-## Tabbar Icons Required
-
-Add these icons to `miniprogram/images/` (81x81px PNG):
-
-| Tab | Default | Active |
-|-----|---------|--------|
-| Home | `home.png` | `home-active.png` |
-| Components | `component.png` | `component-active.png` |
-| API | `api.png` | `api-active.png` |
-
-**Icon Resources:**
-- [WeUI Icon Set](https://github.com/nicktogo/WeUI-Icon)
-- [Iconfont](https://www.iconfont.cn/)
+- `pages/index` - home/landing page
+- `pages/components/*` - button, form, picker, swiper demos
+- `pages/api/*` - network request and local storage demos
+- `pages/device/*` - system info and QR scan demos
+- `pages/media/*` - image and audio demos
+- `pages/location/*` - GPS and map demos
+- `pages/canvas` - canvas drawing demo
